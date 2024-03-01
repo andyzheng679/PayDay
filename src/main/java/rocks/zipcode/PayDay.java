@@ -93,6 +93,7 @@ public class PayDay {
                 new TimeCard("Kris", 21.5, 10.0, 0.05),
                 new TimeCard("Dolio", 23.0, 12.0, 0.05),
                 new TimeCard("Karen", 22.0, 12.0, 0.05),
+                
         };
         return cards;
     }
