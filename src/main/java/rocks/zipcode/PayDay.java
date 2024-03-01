@@ -27,7 +27,7 @@ public class PayDay {
             double d = card.getDeductionRate();
 
             // you need to change the parameters on the method to take the input!
-            String result = payday.pay("Kris", 21.5, 10.0, 0.05);
+            String result = payday.pay(n, w, r, d);
 
             outputReport.append(result);
             outputReport.append("\n");
