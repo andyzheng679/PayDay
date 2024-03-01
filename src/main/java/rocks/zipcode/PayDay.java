@@ -1,5 +1,7 @@
 package rocks.zipcode;
 
+import java.awt.event.AdjustmentEvent;
+
 /**
  * rocks.zipcode.PayDay
  *
@@ -25,7 +27,7 @@ public class PayDay {
             double d = card.getDeductionRate();
 
             // you need to change the parameters on the method to take the input!
-            String result = payday.pay(n, r, w, d);
+            String result = payday.pay("Kris", 21.5, 10.0, 0.05);
 
             outputReport.append(result);
             outputReport.append("\n");
@@ -43,7 +45,11 @@ public class PayDay {
      * @return a string of the form "Kris 215.00 10.75 204.25”
      */
     public String pay(String n, double rate, double worked, double deduct) {
-        return null;
+        double grosspay = rate * worked;
+        double deduction = grosspay * deduct;
+        double netpay = grosspay - deduction;
+
+        return String.format("%s %.2f %.2f %.2f", n, grosspay, deduction, netpay);
     }
 
 
